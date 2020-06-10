@@ -1,7 +1,7 @@
 # About
 
 Simple budget tracker using react js + hooks . CSS framework using Tailwind css .
-Integrate with simple backend services . Contain simple functionality which is add and delete income / expenses , add/delete recurring payment and filter .  
+Integrate with simple backend services . Contain simple functionality which is add and delete income / expenses , add/delete recurring payment and filter .  Expense and income differentiate by colour , which is green for income and red for expenses . 
 
 ## Installation
 ```bash
