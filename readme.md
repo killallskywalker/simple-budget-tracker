@@ -35,4 +35,4 @@ https://github.com/killallskywalker/budget-tracker-services
 ## Demo
 Live demo can be access here - 
 
-[Simple budget tracker](http://simple-budget-tracker.s3-website-ap-southeast-1.amazonaws.com/dashboard)
+[Simple budget tracker](http://simple-budget-tracker.s3-website-ap-southeast-1.amazonaws.com)
