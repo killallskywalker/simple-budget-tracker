@@ -39,8 +39,7 @@ const EditRecord = () => {
   const deleteTransaction = async(event) => {
     event.preventDefault();
     try{
-      console.log('a')
-      const response = await fetch(`${process.env.REACT_APP_ENDPOINT}api/${monthlyTransactionId}/${dailyTransactionId}`,{
+      const response = await fetch(`${process.env.REACT_APP_ENDPOINT}api/transaction-record/${monthlyTransactionId}/${dailyTransactionId}`,{
         method: 'DELETE',
       });
       
