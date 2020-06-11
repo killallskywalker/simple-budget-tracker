@@ -8,9 +8,8 @@ const AddRecord = () => {
   const alert = useAlert()
 
   const {inputs, handleInputChange, handleSubmit} = useFillForm();
-
+  
   const addDailyRecord = async() => {
-    console.log('a')
     try{
       const response = await fetch(`${process.env.REACT_APP_ENDPOINT}api/transaction-record`,{
         method: 'POST',
@@ -53,14 +52,24 @@ const AddRecord = () => {
           <div class="flex flex-col mb-4">
             <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="last_name">Expense Type</label>
             <select class="border py-2 px-3 text-grey-darkest" name="transactionType" id="transactionType" onChange={handleInputChange} value={inputs.transactionType} required>
-              <option value="">Please Select Category</option>
+              <option value="">Please Select</option>
               <option value="Income">Income</option>
               <option value="Expenses">Expenses</option>
             </select>
           </div>
           <div class="flex flex-col mb-4">
             <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="category">Category</label>
-            <input class="border py-2 px-3 text-grey-darkest" type="text" name="category" id="category" onChange={handleInputChange} value={inputs.category}></input>
+            <select class="border py-2 px-3 text-grey-darkest" name="category" id="category" onChange={handleInputChange} value={inputs.category} required>
+              <option value="">Please Select Category</option>
+                <option value="Salary">Salary</option>
+                <option value="Bonus">Bonus</option>
+                <option value="Food">Food</option>
+                <option value="Bills">Bills</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Home">Home</option>             
+                <option value="Health">Health</option>
+                <option value="Shopping">Shopping</option>
+            </select>
           </div>
           <div class="flex flex-col mb-6">
             <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="memo">Memo</label>
